@@ -4,6 +4,5 @@
   <img height="250" width="250" src="https://github.com/RiccardoGalarducci/3D-semantic-segmentation-RSNA2022-kaggle/blob/main/images/site-logo.svg">
 </p>
 
-<br>
 
 # 3D Semantic Segmentation - RSNA 2022
