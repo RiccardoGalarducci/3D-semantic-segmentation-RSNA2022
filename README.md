@@ -19,12 +19,11 @@ This repository contains the first task of the RSNA 2022 challenge, i.e., develo
 The project consists in four main steps which are briefly summarized below
 
 ### 1. Data Preparation
-   The data preparation phase includes multiple transformations performed over the CT scans and the segmentation masks. We resize CT scans, which differs in length, to a **target spatial size** ensuring that all inputs to the model have the same dimensions. In addition, we scale the intensity of each volume. We exploit many image augmentation techniques.
-   For what concern the multi-class segmentation masks we apply **binary one-hot encoding**.
+The data preparation phase includes multiple transformations performed over the CT scans and the segmentation masks. We resize CT scans, which differ in length, to a target spatial size, ensuring that all inputs to the model have the same dimensions. Additionally, we scale the intensity of each volume and exploit many image augmentation techniques. For the multi-class segmentation masks, we apply binary one-hot encoding.
 ### 2. Model Implementation 
-The 3D segmentation model has **UNet** architecture which is state-of-the-art for 3D segmentation of medical images. We exploit **[MONAI](https://monai.io/)**  library for its implementation. 
+The 3D segmentation model has **U-Net** architecture which is *state-of-the-art* for 3D segmentation of medical images. We exploit **[MONAI](https://monai.io/)**  library for its implementation. 
 ### 3. Model Training
-The model has been trained using **AdamW** optimizer with learning rate scheduler. The loss function employed is the weighted sum of **Dice Loss** and **BCE (Binary Cross Entropy) Loss**.
+The model has been trained using **AdamW** optimizer with learning rate scheduler. The loss function employed is given by the weighted combination of **Dice Loss** and **BCE (Binary Cross Entropy) Loss**  which has been shown to yields the best result in terms of segmentation, pixel-wise accuracy, generalization and adversarial attacks.
 
 ```math
 \text{Loss} = \alpha \cdot \text{BCE} + \beta \cdot \text{Dice Loss}
@@ -39,6 +38,7 @@ The model has been trained for 320 epochs.
 
 
 ### 4. Prediction
+As last step we predict the segmentation masks 
 
 
 ## Repository Overview
