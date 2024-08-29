@@ -6,3 +6,11 @@
 
 
 # 3D Semantic Segmentation - RSNA 2022
+
+## Description
+
+## Repository Overview
+
+## Collaborators
+
+* **[Cosimo Faeti](https://github.com/CosimoFaeti)**
