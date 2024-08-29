@@ -32,7 +32,7 @@ The model has been trained using **AdamW** optimizer with learning rate schedule
 The model has been trained for 320 epochs. 
 
 <p align="center">
-  <img width="45%" src=https://github.com/user-attachments/assets/84658b27-d0bd-415d-bedb-b34b6d8e758e hspace="40">
+  <img width="45%" src=https://github.com/user-attachments/assets/84658b27-d0bd-415d-bedb-b34b6d8e758e>
   <img width="45%" src=https://github.com/user-attachments/assets/25cb8924-3e8e-4315-9516-aa9fb544e205>
 </p>
 
