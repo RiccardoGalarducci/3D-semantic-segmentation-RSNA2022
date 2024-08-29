@@ -42,6 +42,10 @@ As last step we predict the segmentation masks
 
 
 ## Repository Overview
+At the root level of this repository, you will find the jupyter notebook for the training and prediction of the 3D semantic segmentation model, as well as files related to the model's configuration and results. More specifically:
+* **[3d-semantic-segmentation.ipynb](https://github.com/RiccardoGalarducci/3D-semantic-segmentation-RSNA2022-kaggle/blob/main/3d-semantic-segmentation.ipynb)**: This notebook  contains the initial training process of the 3D U-Net model, including setting up the model architecture, defining training parameters, and running the first training iterations;
+* **[3d-semantic-segmentation-resume-training.ipynb](https://github.com/RiccardoGalarducci/3D-semantic-segmentation-RSNA2022-kaggle/blob/main/3d-semantic-segmentation-resume-training.ipynb)**: This notebook is used for resuming the training of the 3D U-Net model from a saved checkpoint, allowing the training process to continue;
+* **[3d-semantic-segmentation-prediction.ipynb](https://github.com/RiccardoGalarducci/3D-semantic-segmentation-RSNA2022-kaggle/blob/main/3d-semantic-segmentation-prediction.ipynb)**: This notebook is dedicated to generating predictions using the trained 3D U-Net model on the test data, and evaluating the predictions through visualizations to assess model effectiveness.
 
 
 ## Collaborators
