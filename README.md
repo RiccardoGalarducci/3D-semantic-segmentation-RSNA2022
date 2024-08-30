@@ -7,29 +7,29 @@
 
 # 3D Semantic Segmentation - RSNA 2022
 
-The **[RSNA 2022 Cervical Spine Fracture Detection](https://www.kaggle.com/competitions/rsna-2022-cervical-spine-fracture-detection)** is organized by the Radiological Socity of North America (RSNA) along with the American Society of Neuroradiology (ASNR) and the American Society of Spine Radiology (ASSR).
-The ultimate goal of the challenge is to develop an AI system used to aid in the detection and localization of cervical spine fractures.
+The **[RSNA 2022 Cervical Spine Fracture Detection](https://www.kaggle.com/competitions/rsna-2022-cervical-spine-fracture-detection)** was organized by the Radiological Socity of North America (RSNA) along with the American Society of Neuroradiology (ASNR) and the American Society of Spine Radiology (ASSR).
+The ultimate goal of the challenge, available on kaggle, is to develop an AI system used to aid in the detection and localization of cervical spine fractures.
 
-The training dataset provided is constituted by 2019 CT scans, with one folder for each scan, containing image data in dicom file format. Moreover, segmentation masks (pixel level annotations) are provided for a subset (87 scans) of the training set. The pixels assume values of 1 to 7 for C1 to C7 (seven cervical vertebrae) and 8 to 19 for T1 to T12. This data is provided in the nifti file format. 
+The training dataset provided is constituted by 2019 CT scans of the cervical spine, with one folder for each scan, containing image data in dicom file format. In addition, segmentation masks (pixel level annotations) are provided for a subset (87 scans) of the training data. The pixels assume values of 1 to 7 for C1 to C7 (seven cervical vertebrae) and 8 to 19 for T1 to T12. This data is provided in the nifti file format. 
 
-This repository contains the first task of the RSNA 2022 challenge, i.e., develop a 3D semantic segmentation model to assign segmentation masks to the unlabelled CT scans in the training data.
+This repository contains the first task of the RSNA 2022 challenge, i.e., develop a 3D semantic segmentation model to segment the 1932 unlabelled CT scans in the training data.
 
 ## Description
 
-The project consists in four main steps which are briefly summarized below
+The project is composed by four main steps which are briefly summarized below.
 
 ### 1. Data Preparation
-The data preparation phase includes multiple transformations performed over the CT scans and the segmentation masks. We resize CT scans, which differ in length, to a target spatial size, ensuring that all inputs to the model have the same dimensions. Additionally, we scale the intensity of each volume and exploit many image augmentation techniques. For the multi-class segmentation masks, we apply binary one-hot encoding.
+The data preparation phase includes multiple transformations performed over the CT scans and the segmentation masks. We resize the CT scans, which differ in length, to a target spatial size, ensuring that all inputs have the same dimensions. Then, we scale the intensity of each volume and apply several image augmentation techniques. For the multi-class segmentation masks, we apply binary one-hot encoding.
 ### 2. Model Implementation 
-The 3D segmentation model has **U-Net** architecture which is *state-of-the-art* for 3D segmentation of medical images. We exploit **[MONAI](https://monai.io/)**  library for its implementation. 
+The 3D segmentation model has U-Net architecture which is *state-of-the-art* for 3D segmentation of medical images. We exploit **[MONAI](https://monai.io/)**  library for its implementation. 
 ### 3. Model Training
-The model has been trained using **AdamW** optimizer with learning rate scheduler. The loss function employed is given by the weighted combination of **Dice Loss** and **BCE (Binary Cross Entropy) Loss**  which has been shown to yields the best result in terms of segmentation, pixel-wise accuracy, generalization and adversarial attacks.
+The model has been trained using AdamW optimizer with learning rate scheduler. The loss function employed is given by the weighted combination of *Dice Loss* and *BCE (Binary Cross Entropy) Loss*  which has been shown to yields the best result in terms of segmentation, pixel-wise accuracy, generalization and adversarial attacks. $\alpha$ and $\beta$ parameter has been chosen during the model selection phase.
 
 ```math
 \text{Loss} = \alpha \cdot \text{BCE} + \beta \cdot \text{Dice Loss}
 ```
 
-The model has been trained for 320 epochs. 
+The model has been trained for 320 epochs. The figures below shows the losses behaviour during training (left) and the dice metrics used for model evaluation (right).
 
 <p align="center">
   <img width="45%" src=https://github.com/user-attachments/assets/84658b27-d0bd-415d-bedb-b34b6d8e758e>
@@ -38,7 +38,13 @@ The model has been trained for 320 epochs.
 
 
 ### 4. Prediction
-As last step we predict the segmentation masks 
+As last step we predict the segmentation masks for the unlabelled CT scans using the best trained model according to the model selection phase.
+
+The figure below shows the segmentation of the C3 vertebrae for a random patient.
+
+<p align="center">
+<img width="80%" src="https://github.com/user-attachments/assets/eb5bf45d-143f-47d1-9518-daf06e3067ca">
+</p>
 
 
 ## Repository Overview
