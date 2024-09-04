@@ -29,21 +29,26 @@ The model has been trained using AdamW optimizer with learning rate scheduler. T
 \text{Loss} = \alpha \cdot \text{BCE} + \beta \cdot \text{Dice Loss}
 ```
 
-The model has been trained for 320 epochs. The figures below shows the losses behaviour during training (left) and the dice metrics used for model evaluation (right).
+The model has been trained for 480 epochs. The figures below shows the losses behaviour during training (left) and the dice metrics used for model evaluation (right).
 
 <p align="center">
-  <img width="45%" src=https://github.com/user-attachments/assets/84658b27-d0bd-415d-bedb-b34b6d8e758e>
-  <img width="45%" src=https://github.com/user-attachments/assets/25cb8924-3e8e-4315-9516-aa9fb544e205>
+  <img width="45%" src=https://github.com/user-attachments/assets/9a8cc6a7-6ac5-4826-b96c-42c04d3af0c0>
+  <img width="45%" src=https://github.com/user-attachments/assets/dd55f234-9448-40e4-b7a1-81a9cf9dea55>
 </p>
-
 
 ### 4. Prediction
 As last step we predict the segmentation masks for the unlabelled CT scans using the best trained model according to the model selection phase.
 
-The figure below shows the segmentation of the C3 vertebrae for a random patient.
+The figure below shows the predicted segmentation masks by the model for some slices of a CT scan.
 
 <p align="center">
-<img width="80%" src="https://github.com/user-attachments/assets/eb5bf45d-143f-47d1-9518-daf06e3067ca">
+<img width="80%" src=https://github.com/user-attachments/assets/72486b57-6fed-4cf3-b281-98fe2f1585fc>
+<img width="80%" src=https://github.com/user-attachments/assets/619b76ae-7459-4e2c-9d8d-77a0f53f96fe>
+<img width="80%" src=https://github.com/user-attachments/assets/74a3da26-b70d-4504-887d-62c0959f0d93>
+<img width="80%" src=https://github.com/user-attachments/assets/80105e90-2dc0-4894-ae45-d73761001228>
+<img width="80%" src=https://github.com/user-attachments/assets/3dbfbb00-d534-4934-9ada-503b8e05bcb6>
+<img width="80%" src=https://github.com/user-attachments/assets/dca6986d-6d6f-470a-91e7-c995c65d55b0>
+<img width="80%" src=https://github.com/user-attachments/assets/77d6280f-9d39-433e-b4a5-3c0cf8ec6f18>
 </p>
 
 
