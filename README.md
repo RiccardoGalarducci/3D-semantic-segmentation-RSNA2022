@@ -32,8 +32,8 @@ The model has been trained using AdamW optimizer with learning rate scheduler. T
 The model has been trained for 480 epochs. The figures below shows the losses behaviour during training (left) and the dice metrics used for model evaluation (right).
 
 <p align="center">
-  <img width="45%" src=https://github.com/user-attachments/assets/9a8cc6a7-6ac5-4826-b96c-42c04d3af0c0>
-  <img width="45%" src=https://github.com/user-attachments/assets/dd55f234-9448-40e4-b7a1-81a9cf9dea55>
+  <img width="45%" src=https://github.com/RiccardoGalarducci/3D-semantic-segmentation-RSNA2022-kaggle/blob/main/images/Training_plot.png>
+  <img width="45%" src=https://github.com/RiccardoGalarducci/3D-semantic-segmentation-RSNA2022-kaggle/blob/main/images/Validation_Metric_plot.png>
 </p>
 
 ### 4. Prediction
