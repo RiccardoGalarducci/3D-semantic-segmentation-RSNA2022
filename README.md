@@ -32,8 +32,10 @@ The model has been trained using AdamW optimizer with learning rate scheduler. T
 The model has been trained for 480 epochs. The figures below shows the losses behaviour during training (left) and the dice metrics used for model evaluation (right).
 
 <p align="center">
-  <img width="45%" src=https://github.com/RiccardoGalarducci/3D-semantic-segmentation-RSNA2022-kaggle/blob/main/images/Training_plot.png>
-  <img width="45%" src=https://github.com/RiccardoGalarducci/3D-semantic-segmentation-RSNA2022-kaggle/blob/main/images/Validation_Metric_plot.png>
+  <img width="45%" src=https://github.com/user-attachments/assets/849b0ae4-f188-44bb-950f-6d627f5fd942
+>
+  <img width="45%" src=https://github.com/user-attachments/assets/04d074af-ece4-43a6-89ff-a2c957dbc14e
+>
 </p>
 
 ### 4. Prediction
@@ -42,13 +44,24 @@ As last step we predict the segmentation masks for the unlabelled CT scans using
 The figure below shows the predicted segmentation masks by the model for some slices of a CT scan.
 
 <p align="center">
-<img width="80%" src=https://github.com/user-attachments/assets/72486b57-6fed-4cf3-b281-98fe2f1585fc>
-<img width="80%" src=https://github.com/user-attachments/assets/619b76ae-7459-4e2c-9d8d-77a0f53f96fe>
-<img width="80%" src=https://github.com/user-attachments/assets/74a3da26-b70d-4504-887d-62c0959f0d93>
-<img width="80%" src=https://github.com/user-attachments/assets/80105e90-2dc0-4894-ae45-d73761001228>
-<img width="80%" src=https://github.com/user-attachments/assets/3dbfbb00-d534-4934-9ada-503b8e05bcb6>
-<img width="80%" src=https://github.com/user-attachments/assets/dca6986d-6d6f-470a-91e7-c995c65d55b0>
-<img width="80%" src=https://github.com/user-attachments/assets/77d6280f-9d39-433e-b4a5-3c0cf8ec6f18>
+<img width="80%" src=https://github.com/user-attachments/assets/c84ea5a7-4490-48cd-9ad8-d643299a0d5c
+>
+<img width="80%" src=https://github.com/user-attachments/assets/745bcd39-62ca-4333-9f75-c73596372bf8
+>
+<img width="80%" src=https://github.com/user-attachments/assets/0144965d-8a78-475b-99f8-14014385e176
+>
+<img width="80%" src=https://github.com/user-attachments/assets/cfb1fb4e-3d02-408c-8006-8fd6fed117c8
+>
+<img width="80%" src=https://github.com/user-attachments/assets/2709988a-55d2-4e7a-b6ef-b2ff7784cd12
+>
+<img width="80%" src=https://github.com/user-attachments/assets/00422baa-8bb2-4a36-977e-f2b9d998c13a
+>
+<img width="80%" src=https://github.com/user-attachments/assets/48eb58cd-947f-4ffe-8efe-f821a034dcc1
+>
+<img width="80%" src=https://github.com/user-attachments/assets/be2aace6-8eb2-4f4d-9357-7bce80fa6b3b
+>
+<img width="80%" src=https://github.com/user-attachments/assets/2292ef31-176b-43d7-b40d-fd1ce5bb4429
+>
 </p>
 
 
