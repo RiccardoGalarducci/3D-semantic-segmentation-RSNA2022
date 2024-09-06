@@ -29,7 +29,7 @@ The model has been trained using AdamW optimizer with learning rate scheduler. T
 \text{Loss} = \alpha \cdot \text{BCE} + \beta \cdot \text{Dice Loss}
 ```
 
-The model has been trained for 480 epochs. The figures below shows the losses behaviour during training (left) and the dice metrics used for model evaluation (right).
+The model has been trained for 530 epochs. The figures below shows the losses behaviour during training (left) and the dice metrics used for model evaluation (right).
 
 <p align="center">
   <img width="45%" src=https://github.com/user-attachments/assets/849b0ae4-f188-44bb-950f-6d627f5fd942
